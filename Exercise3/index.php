@@ -18,7 +18,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $storylineOk = strlen($storyline)>=5;
     $videoOk = filter_var($video, FILTER_VALIDATE_URL);
     
-   
     if(
         $titleOk &&
         $actorsOk &&
@@ -49,7 +48,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(!$statement->execute()){
             echo 'INSERT FAILED';
         }
-        
         echo 'Success!';
     }else{
         echo 'Form non complet';
